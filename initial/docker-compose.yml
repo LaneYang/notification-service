@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  mongodb-service:
+    container_name: com.techbow.notification.mongodb
+    image: mongo
+    ports:
+      - 8083:27017
+    volumes:
+      - "mongodb-volume:/data/db"
+volumes:
+  mongodb-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD/mapped-volumes/mongodb-volume
+      
