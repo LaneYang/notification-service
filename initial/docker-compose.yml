@@ -14,5 +14,5 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: $PWD/mapped-volumes/mongodb-volume
+      device: /home/projects/notification/notification-service/initial/mapped-volumes/mongodb-volume
       
